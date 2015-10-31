@@ -1,0 +1,6 @@
+{
+	"name": "itlife/infratag",
+	"autoload": {
+		"psr-4": { "itlife\\infratag\\": "/" }
+	}
+}
