@@ -1,0 +1,5 @@
+{
+	"infratag":{
+		"require":"*infratag/infra.php"
+	}
+}
