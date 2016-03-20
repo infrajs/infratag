@@ -1,5 +1,4 @@
 {
-	"infratag":{
-		"require":"*infratag/infra.php"
-	}
+	"js":"infra.js",
+	"dependencies":"event"
 }

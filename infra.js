@@ -2,9 +2,8 @@
 	infra.infratag={};
 	infra.infratag.counter=0;
 	infra.infratag.childs={};
-	infra.listen(infra,'layer.onshow',function(layer){
+	Event.handler('layer.onshow',function(layer){
 		$(document.getElementById(layer.div)).find('[data-infra]').removeAttr('data-infra').each(function(){
-			console.log(2);
 			if (!this.id) {
 				infra.infratag.counter++;
 				this.id = 'infratag'+infra.infratag.counter;
