@@ -1,9 +1,12 @@
-(function(){
+(async () => {
 	if (!window.infra) window.infra = {};
 	infra.infratag = {};
 	infra.infratag.counter = 0;
 	infra.infratag.childs = {};
-	Event.handler('Layer.onshow', function (layer) {
+	let Load = (await import('/vendor/akiyatkin/load/Load.js')).default
+	let CDN = await Load.on('import-default', '/vendor/akiyatkin/load/CDN.js')
+	await CDN.load('jquery');
+	Event.handler('Layer.onshow', async (layer) => {
 		$(document.getElementById(layer.div)).find('[data-infra]').removeAttr('data-infra').each( function () {
 			if (!this.id) {
 				infra.infratag.counter++;
